@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="img/logo-amarillo.png" alt="" height="100">
+            <img src="img/redes.png" alt="" height="150">
+        </header>
+        <article id="contenido">
+            <div id="botones">
+                <a href="index.html">Ejercicio 1</a>
+                <a href="ejercicio2.html">Ejercicio 2</a>
+                <a href="ejercicio3.html">Ejercicio 3</a>
+                <a href="ejercicio4.html">Ejercicio 4</a>
+                <a href="ejercicio5.html">Ejercicio 5</a>
+            </div>
+            <img src="img/caso1.png" alt="" height="150">
+        </article>
+        <article id="resultado">
+            <script>
+                var precio_final,precio_und,descuento,rebaja_final,cant_camisas,precio;
+
+                precio_und=60
+                cant_camisas=parseInt(prompt("Ingrese el numero de camisas"))
+                
+                if (cant_camisas>=3) {
+                    descuento=0.10
+                } else {
+                    descuento=0
+                }
+
+                precio=cant_camisas*precio_und
+                rebaja_final=precio*descuento
+                precio_final=precio-rebaja_final
+
+                document.write("===============Recibo===============","<br>")
+                document.write("Cantidad de camisas: ",cant_camisas,"<br>")
+                document.write("Precio: ",precio,"<br>")
+                document.write("Descuento: ",rebaja_final,"<br>")
+                document.write("Monto Total: ",precio_final,"<br>")
+                document.write("===============Final===============")
+            </script>
+        </article>
+        <hr>
+        <footer>
+            <p>Todos los derechos reservados ©Copyright Isil</p>
+            <img src="img/redes.png" alt="" height="150">
+        </footer>
+    </main>
+</body>
+</html>

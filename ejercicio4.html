@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="img/logo-amarillo.png" alt="" height="100">
+            <img src="img/redes.png" alt="" height="150">
+        </header>
+        <article id="contenido">
+            <div id="botones">
+                <a href="index.html">Ejercicio 1</a>
+                <a href="ejercicio2.html">Ejercicio 2</a>
+                <a href="ejercicio3.html">Ejercicio 3</a>
+                <a href="ejercicio4.html">Ejercicio 4</a>
+                <a href="ejercicio5.html">Ejercicio 5</a>
+            </div>
+            <img src="img/caso1.png" alt="" height="150">
+        </article>
+        
+        <article id="resultado">
+            <script>
+                var cuadrado,triangulo,rectangulo,circulo,figura;
+                var lado_cuadrado;
+                var altura_rectangulo,base_rectangulo
+                var altura_triangulo,base_triangulo
+                var radio_circulo
+
+                figura=prompt("Ingrese la Figura").toLowerCase();
+
+                if (figura==="cuadrado") {
+                    lado_cuadrado=parseInt(prompt("Ingrese el lado del cuadrado"));
+                    cuadrado=lado_cuadrado*lado_cuadrado;
+                    document.write("El area del cuadrado es: ",cuadrado);
+                } else {
+                    if (figura==="rectangulo") {
+                        altura_rectangulo=parseInt(prompt("Ingrese la altura del rectangulo"));
+                        base_rectangulo=parseInt(prompt("Ingrese la base del rectangulo"));
+                        rectangulo=base_rectangulo*altura_rectangulo;
+                        document.write("El area del rectangulo es: ",rectangulo);
+                    } else {
+                        if (figura==="triangulo") {
+                            altura_triangulo=parseInt(prompt("Ingrese la altura del triangulo"));
+                            base_triangulo=parseInt(prompt("Ingrese la base del triangulo"));
+                            triangulo=(base_triangulo*altura_triangulo)/2;
+                            document.write("El area del triangulo es: ",triangulo);
+                        } else {
+                            if (figura==="circulo") {
+                                radio_circulo=parseInt(prompt("Ingrese el radio del circulo"));
+                                circulo=Math.PI*(radio_circulo*radio_circulo);
+                                document.write("El area del circulo es: ",circulo.toFixed(2));
+                            } else {
+                                document.write("Opcion no valida");
+                            }
+                        }
+                    }
+                }
+                
+               
+
+            </script>
+        </article>
+        <hr>
+        <footer>
+            <p>Todos los derechos reservados ©Copyright Isil</p>
+            <img src="img/redes.png" alt="" height="150">
+        </footer>
+    </main>
+</body>
+</html>

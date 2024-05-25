@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="img/logo-amarillo.png" alt="" height="100">
+            <img src="img/redes.png" alt="" height="150">
+        </header>
+        <article id="contenido">
+            <div id="botones">
+                <a href="index.html">Ejercicio 1</a>
+                <a href="ejercicio2.html">Ejercicio 2</a>
+                <a href="ejercicio3.html">Ejercicio 3</a>
+                <a href="ejercicio4.html">Ejercicio 4</a>
+                <a href="ejercicio5.html">Ejercicio 5</a>
+            </div>
+            <img src="img/caso1.png" alt="" height="150">
+        </article>
+        <article id="resultado">
+            <script>
+                var forma_pago,paquete,cantidad_personas,precio_persona,costo_seguro,costo_traslado,impuesto,total_paquete,total_seguro,total_traslado,total_impuesto,total,descuento,total_total;
+
+                costo_seguro=140;
+                costo_traslado=150;
+                impuesto=0.02;
+
+                paquete=prompt("Ingrese el tipo de paquete (Colca|Cusco|Mancora|Otro)").toLowerCase()
+                forma_pago=prompt("Ingrese el tipo de pago (Efectivo|Tarjeta)").toLowerCase()
+                cantidad_personas=parseInt(prompt("Ingrese el numero de personas"))
+
+                if (paquete==="Colca") {
+                    precio_persona=550
+                } else {
+                    if (paquete==="Cusco") {
+                        precio_persona=700
+                    } else {
+                        if (paquete==="Mancora") {
+                            precio_persona=450
+                        } else {
+                            precio_persona=440
+                        }
+                    }
+                }
+
+                total_paquete=precio_persona*cantidad_personas;
+                total_seguro=costo_seguro*cantidad_personas;
+                total_traslado=costo_traslado*cantidad_personas;
+                total_impuesto=total_paquete*impuesto;
+                total=total_paquete+total_seguro+total_traslado+total_impuesto;
+
+                if (forma_pago==="efectivo") {
+                    descuento=total*0.10;
+                } else {
+                    if (forma_pago==="tarjeta") {
+                        descuento=total*0.05;
+                    } else {
+                        descuento=0;
+                    }
+                    
+                }
+
+                total_total=total-descuento
+
+                document.write("Costo del paquete turístico: S/. " + total_paquete.toFixed(2) + "<br>");
+                document.write("Costo del seguro: S/. " + total_seguro.toFixed(2) + "<br>");
+                document.write("Costo de traslados: S/. " + total_traslado.toFixed(2) + "<br>");
+                document.write("Impuesto (2%): S/. " + total_impuesto.toFixed(2) + "<br>");
+                document.write("Descuento aplicado: S/. " + descuento.toFixed(2) + "<br>");
+                document.write("Monto final a pagar: S/. " + total_total.toFixed(2) + "<br>");
+                
+
+            </script>
+        </article>
+        <hr>
+        <footer>
+            <p>Todos los derechos reservados ©Copyright Isil</p>
+            <img src="img/redes.png" alt="" height="150">
+        </footer>
+    </main>
+</body>
+</html>

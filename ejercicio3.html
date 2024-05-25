@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="img/logo-amarillo.png" alt="" height="100">
+            <img src="img/redes.png" alt="" height="150">
+        </header>
+        <article id="contenido">
+            <div id="botones">
+                <a href="index.html">Ejercicio 1</a>
+                <a href="ejercicio2.html">Ejercicio 2</a>
+                <a href="ejercicio3.html">Ejercicio 3</a>
+                <a href="ejercicio4.html">Ejercicio 4</a>
+                <a href="ejercicio5.html">Ejercicio 5</a>
+            </div>
+            <img src="img/caso1.png" alt="" height="150">
+        </article>
+        
+        <article id="resultado">
+            <script>
+                var edad,msj;
+
+                edad=parseInt(prompt("Ingrese la edad"))
+
+                if (edad<=10) {
+                    msj="Niño"
+                } else {
+                    if (edad<=15) {
+                        msj="Puber"
+                    } else {
+                        if (edad<=19) {
+                            msj="Adolescente"
+                        } else {
+                            if (edad<=26) {
+                                msj="Joven"
+                            } else {
+                                if (edad<=65) {
+                                    msj="Adulto"
+                                } else {
+                                    msj="Anciano"
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+
+
+                document.write("La persona con ",edad," es un ",msj)
+            </script>
+        </article>
+        <hr>
+        <footer>
+            <p>Todos los derechos reservados ©Copyright Isil</p>
+            <img src="img/redes.png" alt="" height="150">
+        </footer>
+    </main>
+</body>
+</html>

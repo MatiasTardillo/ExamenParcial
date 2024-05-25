@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="img/logo-amarillo.png" alt="" height="100">
+            <img src="img/redes.png" alt="" height="150">
+        </header>
+        <article id="contenido">
+            <div id="botones">
+                <a href="index.html">Ejercicio 1</a>
+                <a href="ejercicio2.html">Ejercicio 2</a>
+                <a href="ejercicio3.html">Ejercicio 3</a>
+                <a href="ejercicio4.html">Ejercicio 4</a>
+                <a href="ejercicio5.html">Ejercicio 5</a>
+            </div>
+            <img src="img/caso1.png" alt="" height="150">
+        </article>
+        
+        <article id="resultado">
+            <script>
+                var sueldo_mensual,nro_horas,sueldo_hora,incremento,sueldo;
+
+                nro_horas=parseInt(prompt("Ingrese el numero de horas"))
+                sueldo_hora=parseInt(prompt("Ingrese el sueldo por hora"))
+                
+
+                sueldo=nro_horas*sueldo_hora
+
+                if (nro_horas>=50) {
+                    incremento=sueldo*0.60
+                } else {
+                    incremento=sueldo*0
+                }
+
+                sueldo_mensual=sueldo+incremento
+
+
+                document.write("Numero de horas: ",nro_horas,"<br>")
+                document.write("Sueldo por hora: ",sueldo_hora,"<br>")
+                document.write("Incremento: ",incremento,"<br>")
+                document.write("Sueldo: ",sueldo_mensual,"<br>")
+            </script>
+        </article>
+        <hr>
+        <footer>
+            <p>Todos los derechos reservados ©Copyright Isil</p>
+            <img src="img/redes.png" alt="" height="150">
+        </footer>
+    </main>
+</body>
+</html>
